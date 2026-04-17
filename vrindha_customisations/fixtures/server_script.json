@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": "bank_statement_auto_map",
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-04-06 14:18:38",
+  "module": null,
+  "name": "Bank Statement import",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Bank Statement Import",
+  "script": "docname = frappe.form_dict.get(\"docname\")\nresult = frappe.call(\n    \"vrindha_customisations.bank_statement.import_bank_statement\",\n    docname=docname\n)\nfrappe.response[\"message\"] = result",
+  "script_type": "API"
+ }
+]
