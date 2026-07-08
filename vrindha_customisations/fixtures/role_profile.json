@@ -1,0 +1,917 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-12-04 00:51:47.178684",
+  "name": "Inventory",
+  "role_profile": "Inventory",
+  "roles": [
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-12-04 00:51:47.184852",
+  "name": "Manufacturing",
+  "role_profile": "Manufacturing",
+  "roles": [
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing User"
+   },
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-01-05 12:35:10.536683",
+  "name": "Accounts",
+  "role_profile": "all",
+  "roles": [
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Academics User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Agriculture Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Agriculture User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Analytics"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Auditor"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Blogger"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Dashboard Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee Self Service"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Expense Approver"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Fulfillment User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Inbox User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Interviewer"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Knowledge Base Contributor"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Knowledge Base Editor"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maintenance Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maintenance User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Newsletter Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Prepared Report User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Master Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Quality Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Report Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Master Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Script Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Supplier"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Support Team"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Translator"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Website Manager"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Workspace Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-12-04 00:51:47.202105",
+  "name": "Purchase",
+  "role_profile": "Purchase",
+  "roles": [
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-12-04 12:38:14.854729",
+  "name": "HR",
+  "role_profile": "HR",
+  "roles": [
+   {
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR User"
+   },
+   {
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Expense Approver"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-06-22 12:53:01.981563",
+  "name": "Sales",
+  "role_profile": "Sales",
+  "roles": [
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-06-10 16:23:56.028055",
+  "name": "AllRoles",
+  "role_profile": "AllRoles",
+  "roles": [
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Academics User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Agriculture Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Agriculture User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Analytics"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Auditor"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Blogger"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Dashboard Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee Self Service"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Expense Approver"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Fulfillment User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Inbox User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Interviewer"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Knowledge Base Contributor"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Knowledge Base Editor"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maintenance Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maintenance User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Newsletter Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Prepared Report User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Master Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Quality Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Report Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Master Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Script Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Supplier"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Support Team"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "System Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Translator"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Website Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Workspace Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "CFO"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Anil Kalia-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Anuj Kumar-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Arun Khurana-Accounts Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Atma Ram-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Jaswinder-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maity-Accounts Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Mayank Nagpal- Script Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Mr. Madireddy Narayan Reddy"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Mr. Prasanth Nandigala"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Mr.Abhinav Reddy Nandigala"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Mr.Vijay Kiran Maddireddy"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Nanak Chand-Accounts Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Pankaj Mahajan-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase-User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "R B Yadav-Accounts Manager"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sanjeev-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Shashi Kumar-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sonpreet-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Suresh Kumar-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Tarika-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Vicky Kumar-Accounts User"
+   },
+   {
+    "parent": "AllRoles",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Workflow Lock"
+   }
+  ]
+ }
+]

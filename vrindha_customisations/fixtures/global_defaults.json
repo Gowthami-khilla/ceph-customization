@@ -1,0 +1,16 @@
+[
+ {
+  "country": "India",
+  "default_company": "Ceph Lifesciences Private Limited",
+  "default_currency": "INR",
+  "default_distance_unit": null,
+  "demo_company": null,
+  "disable_in_words": 0,
+  "disable_rounded_total": 0,
+  "docstatus": 0,
+  "doctype": "Global Defaults",
+  "hide_currency_symbol": "",
+  "modified": "2026-05-26 12:32:59.117668",
+  "name": "Global Defaults"
+ }
+]

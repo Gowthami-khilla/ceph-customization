@@ -1,0 +1,54 @@
+[
+ {
+  "conditions": [
+   {
+    "condition": "=",
+    "field": "employee_number",
+    "parent": "3o1347vfff",
+    "parentfield": "conditions",
+    "parenttype": "Document Naming Rule",
+    "value": "1000"
+   }
+  ],
+  "counter": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Document Naming Rule",
+  "document_type": "Employee",
+  "modified": "2026-01-10 20:48:35.971617",
+  "name": "3o1347vfff",
+  "prefix": "1000",
+  "prefix_digits": 4,
+  "priority": 1000
+ },
+ {
+  "conditions": [
+   {
+    "condition": "=",
+    "field": "naming_series",
+    "parent": "1jmceo4cn7",
+    "parentfield": "conditions",
+    "parenttype": "Document Naming Rule",
+    "value": "51"
+   },
+   {
+    "condition": "=",
+    "field": "naming_series",
+    "parent": "1jmceo4cn7",
+    "parentfield": "conditions",
+    "parenttype": "Document Naming Rule",
+    "value": "52"
+   }
+  ],
+  "counter": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Document Naming Rule",
+  "document_type": "Customer",
+  "modified": "2026-01-10 20:59:02.225092",
+  "name": "1jmceo4cn7",
+  "prefix": "51",
+  "prefix_digits": 4,
+  "priority": 0
+ }
+]
