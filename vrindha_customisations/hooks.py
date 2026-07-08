@@ -14,13 +14,7 @@ fixtures = [
     "Workflow",
     "Workflow State",
     "Workflow Action Master",
-    "Custom DocPerm",
-    "Role",
-    "Role Profile",
     "Print Format",
-    "Workspace",
-    "Report",
-    "Dashboard",
     "Document Naming Rule",
     "Document Naming Settings",
 ]
