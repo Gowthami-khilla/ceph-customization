@@ -7,7 +7,6 @@ app_license = "mit"
 
 # Fixtures – exported records that will be imported automatically on app install/migrate
 fixtures = [
-    # Customizations
     "Custom Field",
     "Property Setter",
     "Client Script",
@@ -24,24 +23,6 @@ fixtures = [
     "Dashboard",
     "Document Naming Rule",
     "Document Naming Settings",
-
-    # Module Settings
-    "Accounts Settings",
-    "Buying Settings",
-    "Selling Settings",
-    "Stock Settings",
-    "Manufacturing Settings",
-    "HR Settings",
-    "CRM Settings",
-    "Projects Settings",
-    "Support Settings",
-    "Website Settings",
-    "Portal Settings",
-    "System Settings",
-    "Global Defaults",
-    "Print Settings",
-    "Letter Head",
-    "Terms and Conditions"
 ]
 
 # Apps
