@@ -1,0 +1,182 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2025-12-04 00:50:47.564486",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-15 10:57:09.949995",
+  "name": "Pending Aproval From CFO/Director",
+  "style": "",
+  "workflow_state_name": "Pending Aproval From CFO/Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-13 18:19:00.819748",
+  "name": "Pending Approval From  Mr.Abhinav Reddy Nandigala",
+  "style": "",
+  "workflow_state_name": "Pending Approval From  Mr.Abhinav Reddy Nandigala"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-13 19:03:10.085299",
+  "name": "Pending Approval From Mr.Vijay Kiran Maddireddy",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Mr.Vijay Kiran Maddireddy"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-01 15:56:30.674678",
+  "name": "Pending Department Head Approval",
+  "style": "",
+  "workflow_state_name": "Pending Department Head Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-01 16:10:00.818757",
+  "name": "Pending MD/Vijay Approval",
+  "style": "",
+  "workflow_state_name": "Pending MD/Vijay Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-01 16:10:42.306988",
+  "name": "Pending Ram Verma Approval",
+  "style": "",
+  "workflow_state_name": "Pending Ram Verma Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-14 18:35:58.289996",
+  "name": "Pending Aproval From Sales Manager",
+  "style": "",
+  "workflow_state_name": "Pending Aproval From Sales Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-14 18:37:37.607718",
+  "name": "pending Aproval From Director",
+  "style": "",
+  "workflow_state_name": "pending Aproval From Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-01 15:57:33.690268",
+  "name": "Pending Plant Head Approval",
+  "style": "",
+  "workflow_state_name": "Pending Plant Head Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-13 18:18:09.413123",
+  "name": "Pending Approval From Mr. Prasanth Nandigala",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Mr. Prasanth Nandigala"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-13 18:30:30.613618",
+  "name": "Pending Approval From Mr. Madireddy Narayan Reddy",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Mr. Madireddy Narayan Reddy"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-14 18:28:01.175345",
+  "name": "Pending Aproval From Sales Head",
+  "style": "",
+  "workflow_state_name": "Pending Aproval From Sales Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2025-12-04 00:50:47.567705",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-15 11:06:42.697181",
+  "name": "Pending Approval From Directors",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Directors"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-15 11:07:09.187608",
+  "name": "Pending Approval From CFO/Director",
+  "style": "",
+  "workflow_state_name": "Pending Approval From CFO/Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-21 15:31:51.368944",
+  "name": "Pending Approval From Accounts Manager",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Accounts Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-21 15:33:21.171424",
+  "name": "Pending Approval From CFO",
+  "style": "",
+  "workflow_state_name": "Pending Approval From CFO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2025-12-04 00:50:47.566432",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-14 16:58:03.547620",
+  "name": "Draft",
+  "style": "",
+  "workflow_state_name": "Draft"
+ }
+]

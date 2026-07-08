@@ -17,5 +17,43 @@
   "reference_doctype": "Bank Statement Import",
   "script": "docname = frappe.form_dict.get(\"docname\")\nresult = frappe.call(\n    \"vrindha_customisations.bank_statement.import_bank_statement\",\n    docname=docname\n)\nfrappe.response[\"message\"] = result",
   "script_type": "API"
+ },
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Validate",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-06-11 15:33:23.541259",
+  "module": null,
+  "name": "Item code Autofill",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Item",
+  "script": "if doc.item_group and doc.is_new():\r\n\r\n    item_group_name = str(doc.item_group).strip()\r\n\r\n    series_map = {\r\n        \"Raw Material\": {\r\n            \"start\": 1000000,\r\n            \"end\": 1099999\r\n        },\r\n        \"Semi finished goods\": {\r\n            \"start\": 1600000,\r\n            \"end\": 1699999\r\n        },\r\n        \"Finished Goods\": {\r\n            \"start\": 2000000,\r\n            \"end\": 2099999\r\n        },\r\n        \"Finished Good\": {\r\n            \"start\": 2000000,\r\n            \"end\": 2099999\r\n        }\r\n    }\r\n\r\n    if item_group_name in series_map:\r\n        start_no = series_map[item_group_name][\"start\"]\r\n        end_no = series_map[item_group_name][\"end\"]\r\n\r\n        latest_items = frappe.get_all(\r\n            \"Item\",\r\n            filters={\r\n                \"item_group\": item_group_name\r\n            },\r\n            fields=[\"item_code\"],\r\n            limit_page_length=1000\r\n        )\r\n\r\n        latest_code = start_no - 1\r\n\r\n        for item in latest_items:\r\n            item_code = str(item.item_code or \"\").strip()\r\n\r\n            if item_code.isdigit():\r\n                code = int(item_code)\r\n\r\n                if code >= start_no and code <= end_no and code > latest_code:\r\n                    latest_code = code\r\n\r\n        next_code = latest_code + 1\r\n\r\n        if next_code > end_no:\r\n            frappe.throw(\"Item Code series completed for \" + item_group_name)\r\n\r\n        doc.item_code = str(next_code)\r\n        doc.custom_item_code_series = str(start_no)",
+  "script_type": "DocType Event"
+ },
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Validate",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-07-03 13:32:59.836429",
+  "module": null,
+  "name": "Stock Reconciliation",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Stock Reconciliation",
+  "script": "for row in doc.items:\r\n    if row.item_code and row.batch_no:\r\n        item_has_batch = frappe.db.get_value(\"Item\", row.item_code, \"has_batch_no\")\r\n\r\n        if item_has_batch:\r\n            batch_exists = frappe.db.exists(\"Batch\", row.batch_no)\r\n\r\n            if not batch_exists:\r\n                batch = frappe.new_doc(\"Batch\")\r\n                batch.batch_id = row.batch_no\r\n                batch.item = row.item_code\r\n                batch.insert(ignore_permissions=True)",
+  "script_type": "DocType Event"
  }
 ]

@@ -7,8 +7,17 @@ app_license = "mit"
 
 # Fixtures – exported records that will be imported automatically on app install/migrate
 fixtures = [
-    {"dt": "Client Script", "filters": [["name", "=", "Bank Statement Import"]]},
-    {"dt": "Server Script", "filters": [["name", "=", "Bank Statement import"]]},
+    "Custom Field",
+    "Property Setter",
+    "Client Script",
+    "Server Script",
+    "Workflow",
+    "Workflow State",
+    "Workflow Action Master",
+    "Role",
+    "Print Format",
+    "Workspace",
+    "Report"
 ]
 
 # Apps
