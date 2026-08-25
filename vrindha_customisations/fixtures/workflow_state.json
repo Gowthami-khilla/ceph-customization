@@ -48,15 +48,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-07-01 16:10:00.818757",
-  "name": "Pending MD/Vijay Approval",
-  "style": "",
-  "workflow_state_name": "Pending MD/Vijay Approval"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2026-07-01 16:10:42.306988",
   "name": "Pending Ram Verma Approval",
   "style": "",
@@ -119,15 +110,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "remove",
-  "modified": "2025-12-04 00:50:47.567705",
-  "name": "Rejected",
-  "style": "Danger",
-  "workflow_state_name": "Rejected"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "",
   "modified": "2026-04-15 11:06:42.697181",
   "name": "Pending Approval From Directors",
@@ -164,11 +146,398 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:53:51.117140",
+  "name": "Pending Approval from Administration Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Administration Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:54:09.866616",
+  "name": "Pending Approval from Costing Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Costing Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:54:30.816620",
+  "name": "Pending Approval from EHS Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from EHS Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:54:40.435212",
+  "name": "Pending Approval from Engineering Store Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Store Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:54:51.474802",
+  "name": "Pending Approval from Engineering Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:55:40.481288",
+  "name": "Pending Approval from Exports Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Exports Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:55:59.307069",
+  "name": "Pending Approval from FRD Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from FRD Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:56:22.321884",
+  "name": "Pending Approval from MIS Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from MIS Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:56:53.167124",
+  "name": "Pending Approval from Power Plant Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Power Plant Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:57:02.324924",
+  "name": "Pending Approval from Production Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Production Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:57:21.359080",
+  "name": "Pending Approval from Quality Control Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Quality Control Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:57:34.060184",
+  "name": "Pending Approval from QC Microbiology Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QC Microbiology Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:57:43.948921",
+  "name": "Pending Approval from R&D Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from R&D Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:58:21.186926",
+  "name": "Pending Approval from Security Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Security Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:58:35.924584",
+  "name": "Pending Approval from Supply Chain Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Supply Chain Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:58:44.515141",
+  "name": "Pending Approval from Warehouse Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Warehouse Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:59:25.500429",
+  "name": "Pending Approval from ETP Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from ETP Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-08-20 14:39:38.101093",
+  "name": "Pending Approval From Aman Wadhwa",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Aman Wadhwa"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-27 10:39:02.345697",
+  "name": "Pending Approval From Deepak Malhotra",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Deepak Malhotra"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:53:59.959892",
+  "name": "Pending Approval from Commercial Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Commercial Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:54:19.193962",
+  "name": "Pending Approval from Domestic Marketing Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Domestic Marketing Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:55:50.161485",
+  "name": "Pending Approval from Finance Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Finance Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:56:08.687762",
+  "name": "Pending Approval from International Marketing Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from International Marketing Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:56:43.988139",
+  "name": "Pending Approval from PD Lab Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from PD Lab Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:57:10.793649",
+  "name": "Pending Approval from QA Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QA Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:58:02.152949",
+  "name": "Pending Approval from Corporate Regulatory Affairs Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Corporate Regulatory Affairs Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-15 15:44:34.288329",
+  "name": "Cancelled",
+  "style": "",
+  "workflow_state_name": "Cancelled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:56:32.965916",
+  "name": "Pending Approval from P&A Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from P&A Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:57:52.704510",
+  "name": "Pending Approval from Regulatory Affairs Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Regulatory Affairs Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 11:58:12.208937",
+  "name": "Pending Approval from Secretarial Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Secretarial Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-19 11:34:36.142031",
+  "name": "Pending Approval From Plant Head",
+  "style": "Success",
+  "workflow_state_name": "Pending Approval From Plant Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-08-11 14:29:35.246197",
+  "name": "Pending Re-Approval From Deepak Mathur",
+  "style": "",
+  "workflow_state_name": "Pending Re-Approval From Deepak Mathur"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-22 17:47:59.038898",
+  "name": "Re-Approved",
+  "style": "",
+  "workflow_state_name": "Re-Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-08-04 11:01:12.985711",
+  "name": "Saved",
+  "style": "",
+  "workflow_state_name": "Saved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-22 17:46:47.928121",
+  "name": "Pending Re-Approval From GSN Reddy",
+  "style": "",
+  "workflow_state_name": "Pending Re-Approval From GSN Reddy"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-28 13:38:38.128487",
+  "name": "Pending Approval From Deepak Mathur",
+  "style": "",
+  "workflow_state_name": "Pending Approval From Deepak Mathur"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-22 17:48:49.410550",
+  "name": "Re-Approval Rejected",
+  "style": "",
+  "workflow_state_name": "Re-Approval Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-22 17:45:52.133901",
+  "name": "Pending Re-Approval From Ram Verma",
+  "style": "",
+  "workflow_state_name": "Pending Re-Approval From Ram Verma"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-22 17:46:17.744534",
+  "name": "Pending Re-Approval From MD/Vijay",
+  "style": "",
+  "workflow_state_name": "Pending Re-Approval From MD/Vijay"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2025-12-04 00:50:47.567705",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-19 11:34:20.534658",
+  "name": "Pending Approval From Ram Verma",
+  "style": "Success",
+  "workflow_state_name": "Pending Approval From Ram Verma"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-19 11:34:55.779424",
+  "name": "Pending Approval from gsn reddy",
+  "style": "Success",
+  "workflow_state_name": "Pending Approval from gsn reddy"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "ok-sign",
   "modified": "2025-12-04 00:50:47.566432",
   "name": "Approved",
   "style": "Success",
   "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-01 16:10:00.818757",
+  "name": "Pending MD/Vijay Approval",
+  "style": "",
+  "workflow_state_name": "Pending MD/Vijay Approval"
  },
  {
   "docstatus": 0,

@@ -1,0 +1,18 @@
+[
+ {
+  "automatically_post_balancing_accounting_entry": 0,
+  "company": "Ceph Lifesciences Private Limited",
+  "default_dimension": null,
+  "docstatus": 0,
+  "doctype": "Accounting Dimension Detail",
+  "mandatory_for_bs": 1,
+  "mandatory_for_pl": 1,
+  "modified": "2026-07-25 11:35:54.479786",
+  "name": "dkppea5da8",
+  "offsetting_account": null,
+  "parent": "Unit",
+  "parentfield": "dimension_defaults",
+  "parenttype": "Accounting Dimension",
+  "reference_document": "Unit"
+ }
+]

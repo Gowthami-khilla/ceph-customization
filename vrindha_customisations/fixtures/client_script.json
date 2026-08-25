@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
+  "dt": "Material Request",
+  "enabled": 1,
+  "modified": "2026-07-14 11:23:17.426513",
+  "module": null,
+  "name": "Material request naming series customisation",
+  "script": "frappe.ui.form.on(\"Material Request\", {\r\n    refresh(frm) {\r\n        set_material_request_naming_series(frm);\r\n    },\r\n\r\n    custom_department(frm) {\r\n        set_material_request_naming_series(frm);\r\n    },\r\n\r\n    validate(frm) {\r\n        set_material_request_naming_series(frm);\r\n\r\n        if (!frm.doc.custom_department) {\r\n            frappe.throw(__(\"Please select Department.\"));\r\n        }\r\n\r\n        const unit = get_material_request_unit(frm);\r\n\r\n        if (!unit) {\r\n            frappe.throw(\r\n                __(\"Please select Unit in at least one Material Request Item row.\")\r\n            );\r\n        }\r\n\r\n        if (!frm.doc.naming_series) {\r\n            frappe.throw(\r\n                __(\"Naming Series could not be determined from Department and Unit.\")\r\n            );\r\n        }\r\n\r\n        validate_same_unit_in_all_items(frm);\r\n    }\r\n});\r\n\r\n\r\nfrappe.ui.form.on(\"Material Request Item\", {\r\n    unit(frm, cdt, cdn) {\r\n        set_material_request_naming_series(frm);\r\n        validate_same_unit_in_all_items(frm);\r\n    },\r\n\r\n    items_add(frm, cdt, cdn) {\r\n        set_material_request_naming_series(frm);\r\n    },\r\n\r\n    items_remove(frm, cdt, cdn) {\r\n        set_material_request_naming_series(frm);\r\n    }\r\n});\r\n\r\n\r\nfunction get_material_request_unit(frm) {\r\n    const items = frm.doc.items || [];\r\n\r\n    const row_with_unit = items.find(row => row.unit);\r\n\r\n    return row_with_unit ? String(row_with_unit.unit).trim() : \"\";\r\n}\r\n\r\n\r\nfunction validate_same_unit_in_all_items(frm) {\r\n    const items_with_unit = (frm.doc.items || []).filter(row => row.unit);\r\n\r\n    if (!items_with_unit.length) {\r\n        return;\r\n    }\r\n\r\n    const first_unit = String(items_with_unit[0].unit).trim();\r\n\r\n    const different_unit_row = items_with_unit.find(row => {\r\n        return String(row.unit).trim() !== first_unit;\r\n    });\r\n\r\n    if (different_unit_row) {\r\n        frappe.throw(\r\n            __(\r\n                \"All Material Request Item rows must have the same Unit. Row {0} contains Unit {1}, while the first selected Unit is {2}.\",\r\n                [\r\n                    different_unit_row.idx,\r\n                    different_unit_row.unit,\r\n                    first_unit\r\n                ]\r\n            )\r\n        );\r\n    }\r\n}\r\n\r\n\r\nfunction set_material_request_naming_series(frm) {\r\n    // Saved document name ni change cheyyakudadhu\r\n    if (!frm.is_new()) {\r\n        return;\r\n    }\r\n\r\n    const department = frm.doc.custom_department;\r\n    const unit = get_material_request_unit(frm);\r\n\r\n    if (!department || !unit) {\r\n        frm.set_value(\"naming_series\", \"\");\r\n        return;\r\n    }\r\n\r\n    /*\r\n     * Examples:\r\n     * ADM - Administration - CLPL\r\n     * ACC - Accounts - CLPL\r\n     * PUR - Purchase - CLPL\r\n     *\r\n     * First part ni department code ga use chesthundi.\r\n     */\r\n    const department_code = String(department)\r\n        .split(\" - \")[0]\r\n        .trim()\r\n        .toUpperCase();\r\n\r\n    const allowed_department_codes = [\r\n        \"ACC\",\r\n        \"ADM\",\r\n        \"COM\",\r\n        \"COS\",\r\n        \"DMK\",\r\n        \"EHS\",\r\n        \"EST\",\r\n        \"ENG\",\r\n        \"ETP\",\r\n        \"EXP\",\r\n        \"FIN\",\r\n        \"FRD\",\r\n        \"IMK\",\r\n        \"MIS\",\r\n        \"PNA\",\r\n        \"PDL\",\r\n        \"PWP\",\r\n        \"PRD\",\r\n        \"PUR\",\r\n        \"QA\",\r\n        \"QCM\",\r\n        \"QC\",\r\n        \"RND\",\r\n        \"REG\",\r\n        \"CRA\",\r\n        \"SEC\",\r\n        \"SGY\",\r\n        \"SCM\",\r\n        \"WH\"\r\n    ];\r\n\r\n    if (!allowed_department_codes.includes(department_code)) {\r\n        frm.set_value(\"naming_series\", \"\");\r\n\r\n        frappe.msgprint({\r\n            title: __(\"Department Code Missing\"),\r\n            message: __(\r\n                \"Department code {0} is not configured for Material Request naming.\",\r\n                [department_code]\r\n            ),\r\n            indicator: \"orange\"\r\n        });\r\n\r\n        return;\r\n    }\r\n\r\n    /*\r\n     * Actual Unit Accounting Dimension values:\r\n     * Unit -1\r\n     * Unit -2\r\n     * Unit -6\r\n     */\r\n    const unit_codes = {\r\n        \"Unit -1\": \"U1\",\r\n        \"Unit -2\": \"U2\",\r\n        \"Unit -6\": \"U6\"\r\n    };\r\n\r\n    const unit_code = unit_codes[unit];\r\n\r\n    if (!unit_code) {\r\n        frm.set_value(\"naming_series\", \"\");\r\n\r\n        frappe.msgprint({\r\n            title: __(\"Unit Code Missing\"),\r\n            message: __(\r\n                \"Unit {0} is not configured. Allowed values are Unit -1, Unit -2 and Unit -6.\",\r\n                [unit]\r\n            ),\r\n            indicator: \"orange\"\r\n        });\r\n\r\n        return;\r\n    }\r\n\r\n    const series =\r\n        `${department_code}/${unit_code}/.####./.FY.`;\r\n\r\n    /*\r\n     * Naming Series dropdown lo selected series available ga undela chesthundi.\r\n     */\r\n    const naming_series_field = frm.fields_dict.naming_series;\r\n\r\n    if (naming_series_field) {\r\n        const options = String(\r\n            naming_series_field.df.options || \"\"\r\n        )\r\n            .split(\"\\n\")\r\n            .map(value => value.trim())\r\n            .filter(Boolean);\r\n\r\n        if (!options.includes(series)) {\r\n            options.push(series);\r\n\r\n            frm.set_df_property(\r\n                \"naming_series\",\r\n                \"options\",\r\n                options.join(\"\\n\")\r\n            );\r\n        }\r\n    }\r\n\r\n    frm.set_value(\"naming_series\", series);\r\n    frm.refresh_field(\"naming_series\");\r\n}",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
   "dt": "Site",
   "enabled": 1,
   "modified": "2025-04-16 10:14:49.941703",
@@ -36,8 +47,8 @@
   "docstatus": 0,
   "doctype": "Client Script",
   "dt": "Journal Entry",
-  "enabled": 1,
-  "modified": "2026-05-04 11:57:42.368921",
+  "enabled": 0,
+  "modified": "2026-07-24 16:02:54.486463",
   "module": null,
   "name": "journal entry",
   "script": "frappe.ui.form.on('Journal Entry', {\r\n    onload: function(frm) {\r\n        let user = frappe.session.user;\r\n        let allowed_types = [];\r\n\r\n        // 🔹 Nanakchand\r\n        if (user === \"nanakchand_tax@cephlife.cpm\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 Sanjeev\r\n        else if (user === \"sanjeev_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\"];\r\n        }\r\n\r\n        // 🔹 Suresh Kumar\r\n        else if (user === \"sureshkumar_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 Jaswinder\r\n        else if (user === \"jaswinder_tax@cephlife.cpm\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 R B Yadav\r\n        else if (user === \"rbyadav_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 Anil Kalia\r\n        else if (user === \"anilkalia_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 Atma Ram\r\n        else if (user === \"atmaram_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\"];\r\n        }\r\n\r\n        // 🔹 Vicky Kumar (Unit-6)\r\n        else if (user === \"vickykumar_accountsu6@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 Arun Khurana\r\n        else if (user === \"arunkhurana_tax@cephlife.cpm\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\", \"Debit Note\", \"Credit Note\"];\r\n        }\r\n\r\n        // 🔹 Pankaj Mahajan\r\n        else if (user === \"pankajmahajan_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\", \"Debit Note\", \"Credit Note\"];\r\n        }\r\n\r\n        // 🔹 Sonpreet\r\n        else if (user === \"sonpreet_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\", \"Debit Note\", \"Credit Note\"];\r\n        }\r\n\r\n        // 🔹 Shashi Kumar\r\n        else if (user === \"shashikumar_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 Anuj Kumar\r\n        else if (user === \"anujkumar_accounts@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // 🔹 Mayank Nagpal ✅ (NEW)\r\n        else if (user === \"mayanknagpal_costing@cephlife.com\") {\r\n            allowed_types = [\"Journal Entry\", \"Bank Entry\", \"Cash Entry\"];\r\n        }\r\n\r\n        // Apply restriction\r\n        if (allowed_types.length > 0) {\r\n            frm.set_df_property('voucher_type', 'options', allowed_types.join('\\n'));\r\n\r\n            if (frm.doc.voucher_type && !allowed_types.includes(frm.doc.voucher_type)) {\r\n                frm.set_value('voucher_type', allowed_types[0]);\r\n            }\r\n        }\r\n    }\r\n});",
@@ -151,6 +162,83 @@
   "module": null,
   "name": "Purchase Order Naming Series",
   "script": "frappe.ui.form.on('Purchase Order', {\r\n    refresh(frm) {\r\n        set_po_naming_series(frm);\r\n    },\r\n\r\n    custom_purchase_order_type(frm) {\r\n        set_po_naming_series(frm);\r\n    },\r\n\r\n    unit(frm) {\r\n        set_po_naming_series(frm);\r\n    },\r\n\r\n    transaction_date(frm) {\r\n        set_po_naming_series(frm);\r\n    },\r\n\r\n    validate(frm) {\r\n        set_po_naming_series(frm);\r\n    }\r\n});\r\n\r\nfunction set_po_naming_series(frm) {\r\n    if (!frm.is_new()) return;\r\n\r\n    if (!frm.doc.custom_purchase_order_type || !frm.doc.unit) return;\r\n\r\n    let po_code = frm.doc.custom_purchase_order_type.split(\"-\")[0].trim();\r\n\r\n    let unit_map = {\r\n        \"Unit-1\": \"U1\",\r\n        \"Unit-2\": \"U2\",\r\n        \"Unit-6\": \"U6\"\r\n    };\r\n\r\n    let digit_map = {\r\n        \"CDRM\": \"1\",\r\n        \"CDEM\": \"2\",\r\n        \"CIRM\": \"3\",\r\n        \"CIEM\": \"4\",\r\n        \"CCM\": \"5\",\r\n        \"CCS\": \"6\",\r\n        \"CWO\": \"7\",\r\n        \"CJW\": \"8\",\r\n        \"CSTO\": \"9\"\r\n    };\r\n\r\n    let unit_code = unit_map[frm.doc.unit];\r\n    let digit = digit_map[po_code];\r\n\r\n    if (!unit_code || !digit) return;\r\n\r\n    let date = frm.doc.transaction_date ? new Date(frm.doc.transaction_date) : new Date();\r\n    let year = date.getFullYear();\r\n\r\n    let fy = `${year}-${String(year + 1).slice(-2)}`;\r\n\r\n    let series = `${po_code}/${unit_code}/${digit}.####./${fy}`;\r\n\r\n    frm.set_value(\"naming_series\", series);\r\n}",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 1,
+  "modified": "2026-07-16 16:01:09.126467",
+  "module": "Vrindha Customisations",
+  "name": "Purchase order Navbar Fixed",
+  "script": "frappe.ui.form.on(\"Purchase Order\", {\r\n    refresh(frm) {\r\n        const style_id = \"purchase-order-sticky-header\";\r\n\r\n        if (!document.getElementById(style_id)) {\r\n            const style = document.createElement(\"style\");\r\n            style.id = style_id;\r\n\r\n            style.innerHTML = `\r\n                .page-head {\r\n                    position: sticky !important;\r\n                    top: 0 !important;\r\n                    z-index: 1050 !important;\r\n                    background: var(--bg-color, #ffffff) !important;\r\n                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;\r\n                }\r\n\r\n                .page-head .container,\r\n                .page-head-content {\r\n                    background: var(--bg-color, #ffffff) !important;\r\n                }\r\n            `;\r\n\r\n            document.head.appendChild(style);\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 0,
+  "modified": "2026-07-19 11:37:26.448135",
+  "module": null,
+  "name": "Purchase order Update Items Option",
+  "script": "frappe.ui.form.on(\"Purchase Order\", {\r\n    refresh(frm) {\r\n        // Submitted and not currently Closed\r\n        if (\r\n            frm.doc.docstatus === 1 &&\r\n            frm.doc.status !== \"Closed\" &&\r\n            !frm.is_new()\r\n        ) {\r\n            // Avoid duplicate button\r\n            frm.remove_custom_button(__(\"Update Items\"));\r\n\r\n            frm.add_custom_button(__(\"Update Items\"), function () {\r\n                if (\r\n                    !erpnext ||\r\n                    !erpnext.utils ||\r\n                    !erpnext.utils.update_child_items\r\n                ) {\r\n                    frappe.msgprint(\r\n                        __(\"ERPNext Update Items utility is unavailable.\")\r\n                    );\r\n                    return;\r\n                }\r\n\r\n                erpnext.utils.update_child_items({\r\n                    frm: frm,\r\n                    child_docname: \"items\",\r\n                    child_doctype: \"Purchase Order Detail\",\r\n                    cannot_add_row: false\r\n                });\r\n            });\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 1,
+  "modified": "2026-07-22 18:00:43.744903",
+  "module": null,
+  "name": "Purchase order Update items workflow",
+  "script": "frappe.ui.form.on('Purchase Order', {\r\n    refresh(frm) {\r\n        // Form Submitted (docstatus === 1) unnapudu mathrame run avvali\r\n        if (frm.doc.docstatus === 1) {\r\n            \r\n            // Duplicate ajax listeners ni clear chestam\r\n            $(document).off('ajaxComplete.reapproval').on('ajaxComplete.reapproval', function(event, xhr, settings) {\r\n                if (settings.url && settings.url.includes(\"update_child_qty_rate\")) {\r\n                    \r\n                    // Step 1: Checkbox ni database & UI lo enable cheyadam\r\n                    frappe.db.set_value('Purchase Order', frm.doc.name, 'custom_reapproval_required', 1)\r\n                        .then(() => {\r\n                            frm.set_value('custom_reapproval_required', 1);\r\n                            \r\n                            // Step 2: Image lo unnatu \"Send For Re-Approval\" Workflow Action ni auto-apply cheyadam\r\n                            frappe.xcall('frappe.model.workflow.apply_workflow', {\r\n                                doc: frm.doc,\r\n                                action: 'Send For Re-Approval'\r\n                            }).then(() => {\r\n                                // Step 3: Form Reload & Alert\r\n                                frm.reload_doc();\r\n                                frappe.show_alert({\r\n                                    message: __('Items Updated! Auto-triggered Send For Re-Approval.'),\r\n                                    indicator: 'green'\r\n                                }, 5);\r\n                            }).catch((err) => {\r\n                                // Standard fallback - Workflow action apply kaakapoina reload avuthundi\r\n                                frm.reload_doc();\r\n                            });\r\n                        });\r\n                }\r\n            });\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 0,
+  "modified": "2026-07-30 12:30:55.256939",
+  "module": null,
+  "name": "Purchase Order Address Validation",
+  "script": "frappe.ui.form.on(\"Purchase Order\", {\r\n    unit: function(frm) {\r\n\r\n        if (!frm.doc.unit) return;\r\n\r\n        frappe.db.get_list(\"Address\", {\r\n            filters: {\r\n                custom_unit: frm.doc.unit,\r\n                is_your_company_address: 1,\r\n                address_type: \"Billing\"\r\n            },\r\n            fields: [\"name\"],\r\n            limit: 1\r\n        }).then((r) => {\r\n\r\n            if (r.length) {\r\n                frm.set_value(\"billing_address\", r[0].name);\r\n\r\n                // Refresh address details\r\n                frm.trigger(\"billing_address\");\r\n            } else {\r\n                frappe.msgprint(__(\"No Company Billing Address found for Unit: \") + frm.doc.unit);\r\n            }\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 1,
+  "modified": "2026-08-09 19:58:17.070609",
+  "module": null,
+  "name": "Purchase order Discount issue",
+  "script": "frappe.ui.form.on(\"Purchase Order Item\", {\r\n    rate: function(frm, cdt, cdn) {\r\n        let row = locals[cdt][cdn];\r\n\r\n        // Only set Price List Rate when it is empty/zero\r\n        // and the user has entered an actual Rate.\r\n        if (\r\n            row.rate &&\r\n            (!row.price_list_rate || row.price_list_rate === 0)\r\n        ) {\r\n            frappe.model.set_value(\r\n                cdt,\r\n                cdn,\r\n                \"price_list_rate\",\r\n                row.rate\r\n            );\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 1,
+  "modified": "2026-08-05 11:25:05.505163",
+  "module": null,
+  "name": "Purchase order warehouse validation",
+  "script": "frappe.ui.form.on(\"Purchase Order\", {\r\n\r\n    unit(frm) {\r\n\r\n        if (!frm.doc.unit) {\r\n            return;\r\n        }\r\n\r\n\r\n        frm.doc.items.forEach(function(row) {\r\n\r\n\r\n            // Update Item Level Unit\r\n\r\n            frappe.model.set_value(\r\n                row.doctype,\r\n                row.name,\r\n                \"unit\",\r\n                frm.doc.unit\r\n            );\r\n\r\n\r\n            // Remove old warehouse\r\n            // and mark row changed\r\n\r\n            frappe.model.set_value(\r\n                row.doctype,\r\n                row.name,\r\n                \"warehouse\",\r\n                \"\"\r\n            );\r\n\r\n\r\n        });\r\n\r\n\r\n        frm.refresh_field(\"items\");\r\n\r\n\r\n    }\r\n\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Stock Entry",
+  "enabled": 1,
+  "modified": "2026-08-25 11:06:38.666579",
+  "module": null,
+  "name": "Stock entry Unit dimetion Autofill in item level",
+  "script": "frappe.ui.form.on(\"Stock Entry\", {\r\n    unit: function(frm) {\r\n        console.log(\"HEADER UNIT CHANGED:\", frm.doc.unit);\r\n\r\n        (frm.doc.items || []).forEach(function(row) {\r\n            frappe.model.set_value(\r\n                \"Stock Entry Detail\",\r\n                row.name,\r\n                \"unit\",\r\n                frm.doc.unit\r\n            );\r\n        });\r\n    },\r\n\r\n    items_add: function(frm, cdt, cdn) {\r\n        console.log(\"NEW ITEM ADDED. HEADER UNIT:\", frm.doc.unit);\r\n\r\n        frappe.model.set_value(\r\n            cdt,\r\n            cdn,\r\n            \"unit\",\r\n            frm.doc.unit\r\n        );\r\n    }\r\n});",
   "view": "Form"
  }
 ]

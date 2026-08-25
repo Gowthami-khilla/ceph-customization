@@ -30,16 +30,30 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2026-07-01 15:56:11.832751",
-  "name": "Send for Approval",
-  "workflow_action_name": "Send for Approval"
+  "modified": "2026-04-15 11:06:55.270692",
+  "name": "Submit For Approval",
+  "workflow_action_name": "Submit For Approval"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2026-04-15 11:06:55.270692",
-  "name": "Submit For Approval",
-  "workflow_action_name": "Submit For Approval"
+  "modified": "2026-07-15 15:44:26.474566",
+  "name": "Cancel",
+  "workflow_action_name": "Cancel"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-12-04 00:50:47.581927",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-07-22 17:49:21.794153",
+  "name": "Send For Re-Approval",
+  "workflow_action_name": "Send For Re-Approval"
  },
  {
   "docstatus": 0,
@@ -51,8 +65,8 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2025-12-04 00:50:47.581927",
-  "name": "Approve",
-  "workflow_action_name": "Approve"
+  "modified": "2026-07-01 15:56:11.832751",
+  "name": "Send for Approval",
+  "workflow_action_name": "Send for Approval"
  }
 ]

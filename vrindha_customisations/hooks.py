@@ -16,6 +16,8 @@ fixtures = [
     "Workflow Action Master",
     "Print Format",
     "Document Naming Rule",
+    "Accounting Dimension",
+    "Accounting Dimension Detail",
     "Document Naming Settings",
 ]
 
