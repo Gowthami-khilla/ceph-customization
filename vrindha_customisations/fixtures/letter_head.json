@@ -1,7 +1,7 @@
 [
  {
   "align": "Left",
-  "content": "<div style=\"text-align: left;\">\n<img src=\"/files/Ceph Lifesciences Private LIMITED logoc04a40.png\" alt=\"Ceph Lifesciences Private LIMITED\" height=\"\" style=\"height: px;\">\n</div>",
+  "content": "\n            <!-- Explicit LinkedIn CDN Logo Integration -->\n            <img class=\"logo-img\" src=\"https://media.licdn.com/dms/image/v2/D560BAQE7ER-2uawsLA/company-logo_200_200/B56Ztp07U3HYAI-/0/1767007041851/ceph_lifesciences_private_limited_logo?e=2147483647&amp;v=beta&amp;t=1NgiE3imQvpc1g_kc9anQWVHFiJeDN-z8WUwvl6X4l0\" style=\"max-height: 70px; max-width: 180px; object-fit: contain;\">\n        \n",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Letter Head",
@@ -11,15 +11,15 @@
   "footer_image_height": 0.0,
   "footer_image_width": 0.0,
   "footer_script": null,
-  "footer_source": "Image",
+  "footer_source": "HTML",
   "header_script": null,
   "image": "/files/Ceph Lifesciences Private LIMITED logoc04a40.png",
   "image_height": 0.0,
   "image_width": 0.0,
-  "is_default": 1,
+  "is_default": 0,
   "letter_head_name": "Ceph Lifesciences Private LIMITED",
-  "modified": "2025-12-10 12:39:22.419835",
+  "modified": "2026-10-14 22:20:13.127758",
   "name": "Ceph Lifesciences Private LIMITED",
-  "source": "Image"
+  "source": "HTML"
  }
 ]

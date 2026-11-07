@@ -2,6 +2,123 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-08-23 11:06:37.339607",
+  "name": "initial",
+  "style": "",
+  "workflow_state_name": "initial"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:41:35.296123",
+  "name": "Pending Approval from R&D Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from R&D Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:45:02.592570",
+  "name": "Pending Approval from QC Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QC Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:49:41.812741",
+  "name": "Pending Approval from Plant Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Plant Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:53:44.586503",
+  "name": "Pending Approval from Engineering Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:54:01.405780",
+  "name": "Pending Approval from Engineering Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:00:50.907339",
+  "name": "Pending Approval from ETP Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from ETP Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:37:52.282243",
+  "name": "Pending Approval from Power Plant Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Power Plant Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:48:09.180183",
+  "name": "Pending Approval From HR Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval From HR Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 23:10:01.942877",
+  "name": "Pending Approval From GST Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval From GST Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 23:14:55.722882",
+  "name": "Pending approval From HR Head U6",
+  "style": "",
+  "workflow_state_name": "Pending approval From HR Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 23:21:02.160271",
+  "name": "Pending Approval From EHS Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval From EHS Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 23:21:21.138621",
+  "name": "Pending Approval From EHS Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval From EHS Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "question-sign",
   "modified": "2025-12-04 00:50:47.564486",
   "name": "Pending",
@@ -70,15 +187,6 @@
   "name": "pending Aproval From Director",
   "style": "",
   "workflow_state_name": "pending Aproval From Director"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2026-07-01 15:57:33.690268",
-  "name": "Pending Plant Head Approval",
-  "style": "",
-  "workflow_state_name": "Pending Plant Head Approval"
  },
  {
   "docstatus": 0,
@@ -497,6 +605,285 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-08-20 15:01:46.101803",
+  "name": "Pending Re-Approval From Aman Wadhwa",
+  "style": "",
+  "workflow_state_name": "Pending Re-Approval From Aman Wadhwa"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:30:24.195332",
+  "name": "Pending approval form IT Head U1",
+  "style": "",
+  "workflow_state_name": "Pending approval form IT Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:33:29.229729",
+  "name": "Pending Approval from QA Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QA Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:34:33.559005",
+  "name": "Pending Approval from Production Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Production Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:34:50.916745",
+  "name": "Pending Approval from Production Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Production Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:36:37.856677",
+  "name": "Pending Approval from Warehouse Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Warehouse Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:45:36.894246",
+  "name": "Pending Approval from QC Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QC Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:56:35.816387",
+  "name": "Pending Approval from Engineering Store Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Store Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:56:53.505214",
+  "name": "Pending Approval from Engineering Store Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Store Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:00:36.393030",
+  "name": "Pending Approval from ETP Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from ETP Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:01:05.705592",
+  "name": "Pending Approval from ETP Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from ETP Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:44:01.490609",
+  "name": "Pending Approval From PDL Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval From PDL Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:48:25.890957",
+  "name": "Pending Approval From HR Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval From HR Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 23:08:22.631523",
+  "name": "Pending Approval From EHS Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval From EHS Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 23:10:25.301694",
+  "name": "Pending Approval From GST Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval From GST Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 23:10:36.332677",
+  "name": "Pending Approval From GST Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval From GST Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:30:53.162405",
+  "name": "Pending approval form IT Head U2",
+  "style": "",
+  "workflow_state_name": "Pending approval form IT Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:31:10.698966",
+  "name": "Pending approval form IT Head U6",
+  "style": "",
+  "workflow_state_name": "Pending approval form IT Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:32:47.586968",
+  "name": "Pending Approval from QA Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QA Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:33:09.154522",
+  "name": "Pending Approval from QA Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QA Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:35:14.858398",
+  "name": "Pending Approval from Production Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Production Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:36:58.438083",
+  "name": "Pending Approval from Warehouse Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Warehouse Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:37:14.467302",
+  "name": "Pending Approval from Warehouse Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Warehouse Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:45:48.625859",
+  "name": "Pending Approval from QC Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from QC Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:49:09.324663",
+  "name": "Pending Approval from Plant Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Plant Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:49:23.805199",
+  "name": "Pending Approval from Plant Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Plant Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:53:26.575994",
+  "name": "Pending Approval from Engineering Head U1",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Head U1"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:57:16.358361",
+  "name": "Pending Approval from Engineering Store Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from Engineering Store Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 22:30:43.254350",
+  "name": "Pending Approval From SCM Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval From SCM Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-09-30 21:41:48.022501",
+  "name": "Pending Approval from R&D Head U2",
+  "style": "",
+  "workflow_state_name": "Pending Approval from R&D Head U2"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-01 15:57:33.690268",
+  "name": "Pending Plant Head Approval",
+  "style": "",
+  "workflow_state_name": "Pending Plant Head Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "remove",
   "modified": "2025-12-04 00:50:47.567705",
   "name": "Rejected",
@@ -516,10 +903,37 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2026-09-30 21:42:00.294389",
+  "name": "Pending Approval from R&D Head U6",
+  "style": "",
+  "workflow_state_name": "Pending Approval from R&D Head U6"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-08-20 15:13:01.901106",
+  "name": "Pending Approval from IT Head",
+  "style": "",
+  "workflow_state_name": "Pending Approval from IT Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2026-07-19 11:34:55.779424",
   "name": "Pending Approval from gsn reddy",
   "style": "Success",
   "workflow_state_name": "Pending Approval from gsn reddy"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-01 16:10:00.818757",
+  "name": "Pending MD/Vijay Approval",
+  "style": "",
+  "workflow_state_name": "Pending MD/Vijay Approval"
  },
  {
   "docstatus": 0,
@@ -534,18 +948,18 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-07-01 16:10:00.818757",
-  "name": "Pending MD/Vijay Approval",
+  "modified": "2026-04-14 16:58:03.547620",
+  "name": "Draft",
   "style": "",
-  "workflow_state_name": "Pending MD/Vijay Approval"
+  "workflow_state_name": "Draft"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-04-14 16:58:03.547620",
-  "name": "Draft",
+  "modified": "2026-10-01 15:04:51.685554",
+  "name": "Pending HOD Approval",
   "style": "",
-  "workflow_state_name": "Draft"
+  "workflow_state_name": "Pending HOD Approval"
  }
 ]
