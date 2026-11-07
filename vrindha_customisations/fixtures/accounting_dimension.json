@@ -22,16 +22,5 @@
   "label": "Unit",
   "modified": "2026-07-25 11:35:54.479786",
   "name": "Unit"
- },
- {
-  "dimension_defaults": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Accounting Dimension",
-  "document_type": "Warehouse",
-  "fieldname": "test",
-  "label": "Test",
-  "modified": "2026-08-25 11:59:53.156199",
-  "name": "Test"
  }
 ]
